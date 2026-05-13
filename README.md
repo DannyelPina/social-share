@@ -1,6 +1,6 @@
-# social-share-js
+# social-share
 
-A lightweight, fully typed social share library for **React** and **Vue** with zero runtime dependencies.
+A simple, lightweight, and fully typed library to make your web page shareable fast and easy. It allows you to include social share links for all major social networks into your **React** or **Vue** application with zero runtime dependencies.
 
 ---
 
@@ -27,8 +27,63 @@ A lightweight, fully typed social share library for **React** and **Vue** with z
 ## Installation
 
 ```bash
-npm install social-share-js
+npm install social-share
 ```
+
+
+### CDN
+ 
+If you are not using a bundler, you can include the library directly in your HTML page via CDN. This is based on the original [assisfery/SocialShareJS](https://github.com/assisfery/SocialShareJS) repository.
+ 
+Add the following tags inside your `<head>`:
+ 
+```html
+<!-- FontAwesome (required for icons) -->
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+/>
+ 
+<!-- SocialShareJS styles -->
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/assisfery/SocialShareJS@1.4/social-share.min.css"
+/>
+```
+ 
+Add the following tag before the closing `</body>`:
+ 
+```html
+<!-- SocialShareJS script -->
+<script src="https://cdn.jsdelivr.net/gh/assisfery/SocialShareJS@1.4/social-share.min.js"></script>
+```
+ 
+Then add the share box anywhere in your HTML:
+ 
+```html
+<!-- Renders share buttons for all networks -->
+<div class="ss-box"></div>
+ 
+<!-- Renders share buttons for specific networks -->
+<div class="ss-box" data-ss-social="facebook, twitter, whatsapp"></div>
+ 
+<!-- Share a custom link instead of the current page -->
+<div class="ss-box" data-ss-link="https://example.com"></div>
+```
+ 
+Or create a share box via JavaScript:
+ 
+```js
+SocialShare.createShareBox(
+  "#my-container",
+  "https://example.com",
+  "facebook, twitter, whatsapp"
+);
+```
+ 
+> For the full CDN usage guide, visit the original repository: [assisfery/SocialShareJS](https://github.com/assisfery/SocialShareJS)
+ 
+
 
 ---
 
@@ -37,7 +92,7 @@ npm install social-share-js
 ### React
 
 ```tsx
-import { SocialShareBox, SocialShareButton } from "social-share-js/react";
+import { SocialShareBox, SocialShareButton } from "social-share/react";
 
 function App() {
   return (
@@ -70,7 +125,7 @@ function App() {
 // main.ts
 import { createApp } from "vue";
 import App from "./App.vue";
-import SocialShare from "social-share-js/vue";
+import SocialShare from "social-share/vue";
 
 createApp(App).use(SocialShare).mount("#app");
 ```
@@ -96,7 +151,7 @@ createApp(App).use(SocialShare).mount("#app");
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import { SocialShareBox, SocialShareButton } from "social-share-js/vue";
+import { SocialShareBox, SocialShareButton } from "social-share/vue";
 
 export default defineComponent({
   components: { SocialShareBox, SocialShareButton },
@@ -174,7 +229,7 @@ Renders a row (or column) of multiple share buttons.
 The core package is framework-agnostic and can be used in any Node.js or browser environment.
 
 ```ts
-import { getShareUrl, getShareUrls, getSupportedNetworks } from "social-share-js";
+import { getShareUrl, getShareUrls, getSupportedNetworks } from "social-share";
 ```
 
 ---
@@ -303,7 +358,7 @@ import type {
   NetworkInfo,
   SocialShareButtonProps,
   SocialShareBoxProps,
-} from "social-share-js";
+} from "social-share";
 ```
 
 **`NetworkKey`** — union of all valid network keys:
@@ -339,7 +394,7 @@ interface ShareOptions {
 
 ## For Developers
 
-[Conrtibuting](./Docs/CONTRIBUTING.md)
+[Contributing](./Docs/CONTRIBUTING.md)
 
 
 ## License
