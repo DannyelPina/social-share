@@ -1,4 +1,4 @@
-## Conrtibuting
+## Contributing
 
 ### Workflow
 
@@ -54,7 +54,7 @@ Once the PR is approved:
 
 - Merge it into `main` using **Squash and Merge** to keep the history clean
 - Delete the remote branch immediately after merging — GitHub shows a "Delete branch" button right after the merge
-- Delete your local branch too:
+- (OPTIONAL) Delete your local branch too:
 
 ```bash
 git checkout main
