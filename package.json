@@ -1,84 +1,92 @@
 {
-  "name": "social-share",
-  "version": "1.0.0",
-  "description": "Social share buttons for React and Vue with full TypeScript support",
-  "main": "./dist/index.js",
-  "module": "./dist/index.mjs",
-  "types": "./dist/index.d.ts",
-  "files": [
-    "dist",
-    "src"
-  ],
-  "exports": {
-    ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.mjs",
-      "require": "./dist/index.js"
-    },
-    "./react": {
-      "types": "./dist/react/index.d.ts",
-      "import": "./dist/react/index.mjs",
-      "require": "./dist/react/index.js"
-    },
-    "./vue": {
-      "types": "./dist/vue/index.d.ts",
-      "import": "./dist/vue/index.mjs",
-      "require": "./dist/vue/index.js"
-    }
-  },
-  "typesVersions": {
-    "*": {
-      "react": [
-        "./dist/react/index.d.ts"
-      ],
-      "vue": [
-        "./dist/vue/index.d.ts"
-      ]
-    }
-  },
-  "scripts": {
-    "build": "tsup",
-    "dev": "tsup --watch",
-    "format": "prettier --write \"src/**/*.{ts,tsx,vue}\"",
-    "format:check": "prettier --check \"src/**/*.{ts,tsx,vue}\"",
-    "prepare": "husky",
-    "test": "echo \"No tests yet\" && exit 0",
-    "commitlint": "commitlint --edit"
-  },
-  "peerDependencies": {
-    "react": ">=17",
-    "vue": ">=3"
-  },
-  "peerDependenciesMeta": {
-    "react": {
-      "optional": true
-    },
-    "vue": {
-      "optional": true
-    }
-  },
-  "devDependencies": {
-    "@commitlint/cli": "^21.0.1",
-    "@commitlint/core": "^21.0.1",
-    "@types/node": "^25.7.0",
-    "@types/react": "^18.0.0",
-    "@types/react-dom": "^18.0.0",
-    "husky": "^9.1.7",
-    "lint-staged": "^17.0.4",
-    "prettier": "^3.8.3",
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0",
-    "tsup": "^8.0.0",
-    "typescript": "^5.0.0",
-    "unplugin-vue": "^7.2.0",
-    "vue": "^3.0.0"
-  },
-  "keywords": [
-    "social",
-    "share",
-    "react",
-    "vue",
-    "typescript"
-  ],
-  "license": "MIT"
+	"name": "social-share-toolkit",
+	"version": "1.0.0",
+	"description": "Social Share Toolkit is a versatile library for sharing content across various social media platforms, designed to work seamlessly with both React and Vue applications.",
+	"main": "./dist/index.js",
+	"module": "./dist/index.mjs",
+	"types": "./dist/index.d.ts",
+	"files": [
+		"dist",
+		"src"
+	],
+	"exports": {
+		".": {
+			"types": "./dist/index.d.ts",
+			"import": "./dist/index.mjs",
+			"require": "./dist/index.js"
+		},
+		"./react": {
+			"types": "./dist/react/index.d.ts",
+			"import": "./dist/react/index.mjs",
+			"require": "./dist/react/index.js"
+		},
+		"./vue": {
+			"types": "./dist/vue/index.d.ts",
+			"import": "./dist/vue/index.mjs",
+			"require": "./dist/vue/index.js"
+		}
+	},
+	"typesVersions": {
+		"*": {
+			"react": [
+				"./dist/react/index.d.ts"
+			],
+			"vue": [
+				"./dist/vue/index.d.ts"
+			]
+		}
+	},
+	"scripts": {
+		"build": "tsup",
+		"dev": "tsup --watch",
+		"format": "prettier --write \"src/**/*.{ts,tsx,vue}\"",
+		"format:check": "prettier --check \"src/**/*.{ts,tsx,vue}\"",
+		"prepare": "husky",
+		"test": "echo \"No tests yet\" && exit 0",
+		"commitlint": "commitlint --edit"
+	},
+	"peerDependencies": {
+		"react": ">=17",
+		"vue": ">=3"
+	},
+	"peerDependenciesMeta": {
+		"react": {
+			"optional": true
+		},
+		"vue": {
+			"optional": true
+		}
+	},
+	"devDependencies": {
+		"@commitlint/cli": "^21.0.1",
+		"@commitlint/core": "^21.0.1",
+		"@types/node": "^25.7.0",
+		"@types/react": "^18.0.0",
+		"@types/react-dom": "^18.0.0",
+		"husky": "^9.1.7",
+		"lint-staged": "^17.0.4",
+		"prettier": "^3.8.3",
+		"react": "^18.0.0",
+		"react-dom": "^18.0.0",
+		"tsup": "^8.0.0",
+		"typescript": "^5.0.0",
+		"unplugin-vue": "^7.2.0",
+		"vue": "^3.0.0"
+	},
+	"keywords": [
+		"social",
+		"share",
+		"react",
+		"vue",
+		"typescript"
+	],
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/DannyelPina/social-share-toolkit"
+	},
+	"homepage": "https://github.com/DannyelPina/social-share-toolkit?#readme",
+	"bugs": {
+		"url": "https://github.com/DannyelPina/social-share-toolkit/issues"
+	}
 }
